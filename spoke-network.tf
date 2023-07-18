@@ -9,10 +9,10 @@ terraform {
 # Configure Azure Provider 
 provider "azurerm" {
   features {}
-    subscription_id   = "4f8b1e4a-3a40-4602-8c46-cfa331c40dc6"
-    tenant_id         = "341ffecf-7d58-47a0-8fff-c9d2e5db1e68"
-    client_id         = "c85ae931-f15c-40eb-9d8c-2da83d2542ed"
-    client_secret     =  var.client_secret
+    subscription_id   = var.subscription_id
+    tenant_id         = var.tenant_id
+    client_id         = var.client_id
+    client_secret     = var.client_secret
 }
 # Build azure resource group which is our terraform network
 resource "azurerm_resource_group" "azure_terraform_mainnetwork" {
